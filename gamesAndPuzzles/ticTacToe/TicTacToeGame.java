@@ -138,7 +138,6 @@ class Game {
     }
 
     public void makeMove(int row, int col) {
-        // BUG FIXED: Prevent moves after game is over
         if (status != GameStatus.IN_PROGRESS) throw new IllegalStateException("Game Over");
         if (!board.isValidPos(row, col) || !board.getCell(row, col).isEmpty()) throw new IllegalArgumentException();
 
